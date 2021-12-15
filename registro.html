@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digiual - Registro</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1 class="log">digiual</h1>
+        <nav>
+            <ul class="bar">
+                <li><a href="ingreso.html">Ingresá</a></li>
+                <li>Registrate</li>
+                <li><a href="beneficios.html">Beneficios</a></li>
+                <li><a href="index.html">Conoce más</a></li>
+                <li>Contacto</li>
+            </ul>
+        </nav>
+    </header>
+    <hr> 
+    <main>
+        <section>
+            <h2>Registrate</h2>
+            <form action="">
+                <fieldset>
+                    <div>
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="lastname">Apellido</label>
+                        <input type="text" name="lastname">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="mail">E-mail</label>
+                        <input type="email" name="mail" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="pais">Pais</label>
+                        <select name="pais" id="">
+                            <option value="Argentina">Argentina</option>
+                            <option value="chike">Chile</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Bolivia">Bolivia</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="ocupacion">Selcciona tu ocupacion</label>
+                        <input type="radio" name="Relacion de dependencia" id="">Relacion de dependencia
+                        <input type="radio" name="Autonomo" id="">Autonomo
+                        <input type="radio" name="Sin ocupacion" id="">Sin ocupacion
+                    </div>
+                    <br>
+                    <div>
+                        <label for="pass" placeholder="tu password">Contraseña</label>
+                        <input type="password" name="pass">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="submit" value="ENVIAR">
+                        <input type="reset" value="BORRAR">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        <section>
+            <a href="index.html">Volver</a>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="">Terminos y condiciones</a></li>
+            <li><a href="">¿Quienes somos?</a></li>
+            <li><a href="">Contactanos</a></li>
+            <li><a href="">Nuestra redes</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
