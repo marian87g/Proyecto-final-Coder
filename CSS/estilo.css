@@ -114,11 +114,11 @@ header{
     grid-area: texto;
     transition: all 2s ease;
 }
-.texto:hover{
-    /* border: black;
+/* .texto:hover{
+    border: black;
     background-color: #0093E9;
-    transform: scale(1.3, 1.3); */
-}
+    transform: scale(1.3, 1.3);
+} */
 .imagen {
     border: groove 5px black;
     border-radius: 50px;
