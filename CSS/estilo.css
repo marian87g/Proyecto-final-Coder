@@ -1,44 +1,21 @@
-body{
-    font-family: 'Padauk', sans-serif;
-    background-color: #08F;
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-/* BARRA DE NAVEGACION */
-header{
-    background-color: #0093E9;
-    background-image: linear-gradient(0deg, #0093E9 0%, #80D0C7 50%, #ffffff 100%);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    width: auto;
-    height: 100px;
-}
-.bar{ 
-    background-color:transparent;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 10px;
-    margin: 15px;
-}
-.bar li{
-    padding: 5px;
-    margin: 10px;
-    font-size: 135%;
-    display: flex;
-    text-align: center;  
-}
-.bar li a{
-    display: flex;
-    text-decoration: none;
-}
-.bar li a:hover{
-    font-style: italic;
-    font-weight: bold;
-}
-.log{
+body {
+  font-family: fuente_1; }
+
+header {
+  background-color: #0093E9;
+  background-image: linear-gradient(0deg, #0093E9 0%, #80D0C7 50%, #ffffff 100%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: auto;
+  height: 100px; }
+  header .log {
     display: flex;
     font-family: 'Inter', sans-serif;
     font-size: 175%;
@@ -48,56 +25,62 @@ header{
     padding: 5px;
     margin: 10px;
     width: 40%;
-    align-content: center;
-}
-.log img{
+    align-content: center; }
+  header img {
+    margin: 10px; }
+  header nav .bar {
+    background-color: transparent;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 15px;
+    font-family: 'Inter', sans-serif; }
+  header nav li {
+    padding: 5px;
     margin: 10px;
-}
+    font-size: 135%;
+    display: flex;
+    text-align: center; }
+  header nav a {
+    display: flex;
+    text-decoration: none; }
+    header nav a:hover {
+      font-style: italic;
+      font-weight: bold; }
 
-/* ESTILO SECCION REGISTRO Y APP */
-.intro{
-    margin: 10px;
-    background-color: white;
-    height: 400px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "link1 texto imagen"
-        "link2 texto imagen"
-    ;
-    align-items: center;
-    justify-items: center;
-}    
-.link1 {
+.intro {
+  margin: 10px;
+  background-color: white;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "link1 texto imagen" "link2 texto imagen";
+  align-items: center;
+  justify-items: center; }
+  .intro .link1 {
     padding: 5px;
     margin: 30px;
-    background-image: linear-gradient(to bottom, rgb(0, 153, 255), white);
+    background-image: linear-gradient(to bottom, #0099ff, white);
     width: 150px;
     text-align: center;
     text-decoration: none;
     font-size: 125%;
     grid-area: link1;
-    align-self: flex-end;
-}
-.link1:hover{
-    transform: scale(1.3, 1.3);
-}
-.link2 {
+    align-self: flex-end; }
+  .intro .link2 {
     padding: 5px;
     margin: 30px;
-    background-image: linear-gradient(to top, rgb(0, 153, 255), white);
+    background-image: linear-gradient(to top, #0099ff, white);
     width: 150px;
     text-align: center;
     text-decoration: none;
     font-size: 125%;
     grid-area: link2;
-    align-self: flex-start;
-}
-.link2:hover{
-    transform: translate(-10px, -20px);
-}
-.texto {
+    align-self: flex-start; }
+  .intro .texto {
     color: #08F;
     font-size: 250%;
     text-anchor: end;
@@ -105,194 +88,102 @@ header{
     text-align: center;
     padding: 10px;
     margin: 20px;
-    
     grid-area: texto;
-    transition: all 2s ease;
-}
-/* .texto:hover{
-    border: black;
-    background-color: #0093E9;
-    transform: scale(1.3, 1.3);
-} */
-.imagen {
+    transition: all 2s ease; }
+  .intro .imagen {
     border: groove 5px black;
     border-radius: 50px;
     align-self: center;
     grid-area: imagen;
     width: 85%;
-    margin: 10px;
-}
-.imagen:hover{
-    transform: scale(1.5,1.5);
-}
+    margin: 10px; }
 
-/* ESTILO SECCION DESCARGA POR QR */
-.intro1{
-    height: 450px;
-    display: grid;
-    grid-template-columns: 1fr 2fr; 
-    grid-template-rows: 1fr 1fr; 
-    grid-template-areas: 
-        "escanea texto1"
-        "imagen1 texto1"
-    ;
-    align-items: center;
-    justify-items: center;
-}
-.escanea{
+.intro1 {
+  height: 450px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "escanea texto1" "imagen1 texto1";
+  align-items: center;
+  justify-items: center; }
+  .intro1 .escanea {
     grid-area: escanea;
     font-size: 200%;
     margin: 25px;
-    padding: 10px;
-}
-.imagen1{
+    padding: 10px; }
+  .intro1 .imagen1 {
     grid-area: imagen1;
     width: 150px;
-    margin: 75px;
-}
-.texto1{
+    margin: 75px; }
+  .intro1 .texto1 {
     grid-area: texto1;
     font-size: 150%;
     width: 70%;
-    text-align: center;
-}
+    text-align: center; }
 
-/* ESTILO SECCION REGISGTRO INFERIOR */
-.intro2{
-    margin: 10px;
-    background-color: white;
-    height: 400px;
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1.5fr 0.5fr;
-    grid-template-areas: 
-        "texto2 imagen2"
-        "linkregistro imagen2"
-    ;
-    align-items: center;
-    justify-items: center;
-}
-.texto2{
+.intro2 {
+  margin: 10px;
+  background-color: white;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5fr 0.5fr;
+  grid-template-areas: "texto2 imagen2" "linkregistro imagen2";
+  align-items: center;
+  justify-items: center; }
+  .intro2 .texto2 {
     grid-area: texto2;
     text-align: center;
     margin: 30px;
     padding: 15px;
     font-size: 125%;
-    width: 60%;
-}
-.linkregistro{
+    width: 60%; }
+  .intro2 .linkregistro {
     grid-area: linkregistro;
     text-decoration: none;
     text-align: center;
     font-size: 150%;
-    align-self: flex-start;
-}
-.imagen2{
+    align-self: flex-start; }
+  .intro2 .imagen2 {
     grid-area: imagen2;
     height: 300px;
     border: groove 5px black;
-    border-radius: 50px;
-}
+    border-radius: 50px; }
 
-/* ESTILO PIE DE PAGINA */
-footer{
-    background-color: #0093E9;
-    background-image: linear-gradient(0deg, #0093E9 0%, #80D0C7 50%, #ffffff 100%);
-}
-footer ul{
+footer {
+  background-color: #0093E9;
+  background-image: linear-gradient(0deg, #0093E9 0%, #80D0C7 50%, #ffffff 100%); }
+  footer ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding: 15px;
     width: 100%;
-    list-style: none;
-}
-footer ul li a{
-    width: 50%;
-    padding: 5px;
-    margin: 10px;
-    font-size: 125%;
-    text-decoration: none;
-}
+    list-style: none; }
+    footer ul li a {
+      width: 50%;
+      padding: 5px;
+      margin: 10px;
+      font-size: 125%;
+      text-decoration: none; }
 
-/* ESTILO PAGINA INGRESO */
-.ingresoForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 450px;
-}
-.ingresoForm h2{
+.ingresoForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 450px; }
+  .ingresoForm h2 {
     font-size: 250%;
     text-align: center;
     margin: 30px;
-    padding: 15px;
-}
-.ingresoForm form{
+    padding: 15px; }
+  .ingresoForm form {
     text-align: center;
-    margin: 30px;
-}
-.ingresoForm form div{
-    margin: 15px;
-}
-.ingresoForm a{
+    margin: 30px; }
+    .ingresoForm form div {
+      margin: 15px; }
+  .ingresoForm a {
     text-decoration: none;
     margin: 30px;
     pad: 5px;
-    font-size: 150%;
-}
-
-/* ESTILO MEDIAQUERIE */
-
-@media screen and (max-width: 480px) {
-
-    header{
-        width: 100%;
-        flex-direction: column;
-        align-content: center;
-    }
-    .bar{
-        flex-direction: column;
-        font-size: 75%;
-    }
-    .log{
-        font-size: 200%;
-        justify-content: center;
-    }
-
-    .intro{
-        grid-template-columns: 1fr, 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: 
-            "texto texto"
-            "link1 link2"
-            "imagen imagen";
-        justify-items: center;
-        align-items: center;
-        height: auto;
-    }
-    .texto{
-        font-size: 150%;
-    }
-    .intro1{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: 
-            "escanea"
-            "imagen1"
-            "texto1";
-        height: auto;
-    }
-    .intro2{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, fr);
-        grid-template-areas: 
-            "imagen2"
-            "linkregistro"
-            "texto2";
-        height: auto;
-    }
-
-
-
-}
+    font-size: 150%; }
