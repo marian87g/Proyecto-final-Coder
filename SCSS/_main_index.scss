@@ -1,0 +1,131 @@
+.intro{
+    margin: 10px;
+    background-color: white;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "link1 texto imagen"
+        "link2 texto imagen"
+    ;
+    align-items: center;
+    justify-items: center;
+
+    .link1{
+        padding: 5px;
+        margin: 30px;
+        background-image: linear-gradient(to bottom, rgb(0, 153, 255), white);
+        width: 150px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 125%;
+        grid-area: link1;
+        align-self: flex-end;
+    }
+
+    .link2 {
+        padding: 5px;
+        margin: 30px;
+        background-image: linear-gradient(to top, rgb(0, 153, 255), white);
+        width: 150px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 125%;
+        grid-area: link2;
+        align-self: flex-start;
+    }
+
+    .texto {
+        color: #08F;
+        font-size: 250%;
+        text-anchor: end;
+        width: 90%;
+        text-align: center;
+        padding: 10px;
+        margin: 20px;
+        
+        grid-area: texto;
+        transition: all 2s ease;
+    }
+
+    .imagen {
+        border: groove 5px black;
+        border-radius: 50px;
+        align-self: center;
+        grid-area: imagen;
+        width: 85%;
+        margin: 10px;
+    }
+}  
+
+.intro1{
+    height: 450px;
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows: 1fr 1fr; 
+    grid-template-areas: 
+        "escanea texto1"
+        "imagen1 texto1"
+    ;
+    align-items: center;
+    justify-items: center;
+
+    .escanea{
+        grid-area: escanea;
+        font-size: 200%;
+        margin: 25px;
+        padding: 10px;
+    }
+
+    .imagen1{
+        grid-area: imagen1;
+        width: 150px;
+        margin: 75px;
+    }
+
+    .texto1{
+        grid-area: texto1;
+        font-size: 150%;
+        width: 70%;
+        text-align: center;
+    }
+
+}
+
+.intro2{
+    margin: 10px;
+    background-color: white;
+    height: 400px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1.5fr 0.5fr;
+    grid-template-areas: 
+        "texto2 imagen2"
+        "linkregistro imagen2"
+    ;
+    align-items: center;
+    justify-items: center;
+
+    .texto2{
+        grid-area: texto2;
+        text-align: center;
+        margin: 30px;
+        padding: 15px;
+        font-size: 125%;
+        width: 60%;
+    }
+    .linkregistro{
+        grid-area: linkregistro;
+        text-decoration: none;
+        text-align: center;
+        font-size: 150%;
+        align-self: flex-start;
+    }
+    .imagen2{
+        grid-area: imagen2;
+        height: 300px;
+        border: groove 5px black;
+        border-radius: 50px;
+    }
+}

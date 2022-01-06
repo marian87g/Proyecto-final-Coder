@@ -1,0 +1,33 @@
+$fuente_1: 'Padauk', sans-serif;
+@import "body";
+@import "header";
+@import "main_index";
+@import "footer";
+
+.ingresoForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+
+    h2{
+        font-size: 250%;
+        text-align: center;
+        margin: 30px;
+        padding: 15px;
+    }
+    form{
+        text-align: center;
+        margin: 30px;
+        
+        div{
+            margin: 15px;
+        }
+    }
+    a{
+        text-decoration: none;
+        margin: 30px;
+        pad: 5px;
+        font-size: 150%;
+    }
+}
