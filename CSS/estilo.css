@@ -182,8 +182,61 @@ footer {
     margin: 30px; }
     .ingresoForm form div {
       margin: 15px; }
+      .ingresoForm form div label {
+        font-size: 110%; }
+      .ingresoForm form div input {
+        border-radius: 5px; }
   .ingresoForm a {
     text-decoration: none;
     margin: 30px;
     pad: 5px;
     font-size: 150%; }
+
+.registroForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto; }
+  .registroForm h2 {
+    font-size: 250%;
+    text-align: center;
+    margin: 30px;
+    padding: 15px; }
+  .registroForm form {
+    text-align: center;
+    margin: 30px; }
+    .registroForm form div {
+      margin: 15px; }
+      .registroForm form div label {
+        font-size: 110%; }
+      .registroForm form div input {
+        border-radius: 5px; }
+  .registroForm a {
+    text-decoration: none;
+    margin: 30px;
+    pad: 5px;
+    font-size: 150%; }
+
+.seccionBenef {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr;
+  grid-template-areas: "titulo titulo" "imgBenef1 textoBenef" "imgBenef2 textoBenef";
+  justify-items: center;
+  align-items: center; }
+  .seccionBenef .titulo {
+    grid-area: titulo;
+    margin: 5px;
+    font-size: 3rem; }
+  .seccionBenef .imgBenef1 {
+    grid-area: imgBenef1; }
+  .seccionBenef .imgBenef2 {
+    grid-area: imgBenef2; }
+  .seccionBenef .textoBenef {
+    grid-area: textoBenef;
+    text-align: center;
+    margin: 30px;
+    padding: 10px;
+    font-size: 1.25rem;
+    width: 50%; }
