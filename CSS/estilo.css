@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  font-family: fuente_1; }
+  font-family: 'Padauk', sans-serif; }
 
 header {
   background-color: #0093E9;
@@ -14,7 +14,7 @@ header {
   flex-wrap: nowrap;
   justify-content: space-between;
   width: auto;
-  height: 100px; }
+  height: 90px; }
   header .log {
     display: flex;
     font-family: 'Inter', sans-serif;
@@ -26,8 +26,9 @@ header {
     margin: 10px;
     width: 40%;
     align-content: center; }
-  header img {
-    margin: 10px; }
+    header .log img {
+      margin: 10px;
+      align-self: center; }
   header nav .bar {
     background-color: transparent;
     list-style-type: none;
@@ -40,12 +41,13 @@ header {
   header nav li {
     padding: 5px;
     margin: 10px;
-    font-size: 135%;
+    font-size: 120%;
     display: flex;
     text-align: center; }
   header nav a {
     display: flex;
-    text-decoration: none; }
+    text-decoration: none;
+    color: white; }
     header nav a:hover {
       font-style: italic;
       font-weight: bold; }
@@ -61,37 +63,39 @@ header {
   align-items: center;
   justify-items: center; }
   .intro .link1 {
-    padding: 5px;
+    padding: 10px;
     margin: 30px;
     background-image: linear-gradient(to bottom, #0099ff, white);
-    width: 150px;
+    width: auto;
     text-align: center;
     text-decoration: none;
     font-size: 125%;
     grid-area: link1;
-    align-self: flex-end; }
+    align-self: flex-end;
+    border-radius: 5px;
+    color: color1; }
   .intro .link2 {
-    padding: 5px;
+    padding: 10px;
     margin: 30px;
     background-image: linear-gradient(to top, #0099ff, white);
-    width: 150px;
+    width: auto;
     text-align: center;
     text-decoration: none;
     font-size: 125%;
     grid-area: link2;
-    align-self: flex-start; }
+    align-self: flex-start;
+    border-radius: 5px; }
   .intro .texto {
     color: #08F;
-    font-size: 250%;
-    text-anchor: end;
+    font-size: 220%;
     width: 90%;
     text-align: center;
     padding: 10px;
     margin: 20px;
     grid-area: texto;
-    transition: all 2s ease; }
+    font-family: 'Inter', sans-serif;
+    transition: all 3s ease-out; }
   .intro .imagen {
-    border: groove 5px black;
     border-radius: 50px;
     align-self: center;
     grid-area: imagen;
@@ -147,7 +151,6 @@ header {
   .intro2 .imagen2 {
     grid-area: imagen2;
     height: 300px;
-    border: groove 5px black;
     border-radius: 50px; }
 
 footer {
@@ -240,3 +243,39 @@ footer {
     padding: 10px;
     font-size: 1.25rem;
     width: 50%; }
+
+/* ESTILO MEDIAQUERIE */
+@media screen and (max-width: 480px) {
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    header .log {
+      display: flex;
+      flex-direction: column;
+      font-size: 200%;
+      justify-content: center; }
+    header nav .bar {
+      display: flex;
+      flex-direction: column;
+      font-size: 75%; }
+  .intro {
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "texto texto" "link1 link2" "imagen imagen";
+    justify-items: center;
+    align-items: center;
+    height: auto; }
+    .intro .texto {
+      font-size: 150%; }
+  .intro1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "escanea" "imagen1" "texto1";
+    height: auto; }
+  .intro2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, fr);
+    grid-template-areas: "imagen2" "linkregistro" "texto2";
+    height: auto; } }
