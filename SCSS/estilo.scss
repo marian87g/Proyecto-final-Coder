@@ -1,113 +1,91 @@
-$color1: white;
+$color1: #13293D;
+$color2: #006494;
+$color3: #247BA0;
+$color4: #1B98E0;
+$color5: #E8F1F2;
 @import "body";
 @import "header";
 @import "main_index";
 @import "footer";
+@import "ingreso_form";
+@import "registro_form";
+@import "beneficios";
 
-.ingresoForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 450px;
-
-    h2{
-        font-size: 250%;
-        text-align: center;
-        margin: 30px;
-        padding: 15px;
-    }
-    form{
-        text-align: center;
-        margin: 30px;
-        
-        div{
-            margin: 15px;
-            
-            label{
-                font-size: 110%;
-            }
-            input{
-                border-radius: 5px;
-            }
-        }
-    }
-    a{
-        text-decoration: none;
-        margin: 30px;
-        pad: 5px;
-        font-size: 150%;
-    }
-}
-
-.registroForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-
-    h2{
-        font-size: 250%;
-        text-align: center;
-        margin: 30px;
-        padding: 15px;
-    }
-    form{
-        text-align: center;
-        margin: 30px;
-        
-        div{
-            margin: 15px;
-
-            label{
-                font-size: 110%;
-            }
-            input{
-                border-radius: 5px;
-            }
-        }
-    }
-    a{
-        text-decoration: none;
-        margin: 30px;
-        pad: 5px;
-        font-size: 150%;
-    }
-}
-
-.seccionBenef{
-    margin: 10px;
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 0.5fr 1fr 1fr;
-    grid-template-areas: 
-       "titulo titulo"
-       "imgBenef1 textoBenef"
-       "imgBenef2 textoBenef"
-    ;
-    justify-items: center;
-    align-items: center;
+@mixin estilo_cajas ($bg){
+    display: inline-block;
+    margin: 15px;
+    padding: 10px;
+    width: 25%;
+    border-radius: 15px;
+    background-color: $bg;
     
-    .titulo{
-        grid-area: titulo;
-        margin: 5px;
-        font-size: 3rem;
+    h3{
+        text-align: left;
     }
+    p{
+        text-align: left;
+    }
+}
 
-    .imgBenef1{
-        grid-area: imgBenef1;
-    }
-    .imgBenef2{
-        grid-area: imgBenef2;
-    }
-    .textoBenef{
-        grid-area: textoBenef;
+.intro3{
+    margin: 30px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+
+    h2{
         text-align: center;
         margin: 30px;
-        padding: 10px;
-        font-size: 1.25rem;
+        padding: 15px;
+        color: $color2;
+        background-color: $color1;
+        border-radius: 15px;
         width: 50%;
     }
+    .cajas{
+        
+        .caja1{
+            @include estilo_cajas($color2);
+        }
+        .caja2{
+            @include estilo_cajas($color3);
+        }
+        .caja3{
+            @include estilo_cajas($color4);
+        }
+        .caja4{
+            @include estilo_cajas($color2);
+        }
+        .caja5{
+            @include estilo_cajas($color3);
+        }
+        .caja6{
+            @include estilo_cajas($color4);
+        }
+    }  
 
+}
+
+.intro4{
+    .redes{
+        width: 30%;
+        margin: 30px;
+        display: flex;
+        background-color: $color1;
+        .iconFb{
+            @extend .redes;
+        }
+        .iconIg{
+            @extend .redes;
+        }
+        .iconTw{
+            @extend .redes;
+        }
+    
+    }
+    
 }
 
 /* ESTILO MEDIAQUERIE */

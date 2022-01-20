@@ -1,0 +1,35 @@
+.seccionBenef{
+    margin: 10px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-areas: 
+       "titulo titulo"
+       "imgBenef1 textoBenef"
+       "imgBenef2 textoBenef"
+    ;
+    justify-items: center;
+    align-items: center;
+    
+    .titulo{
+        grid-area: titulo;
+        margin: 5px;
+        font-size: 3rem;
+    }
+
+    .imgBenef1{
+        grid-area: imgBenef1;
+    }
+    .imgBenef2{
+        grid-area: imgBenef2;
+    }
+    .textoBenef{
+        grid-area: textoBenef;
+        text-align: center;
+        margin: 30px;
+        padding: 10px;
+        font-size: 1.25rem;
+        width: 50%;
+    }
+
+}

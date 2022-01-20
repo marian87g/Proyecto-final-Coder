@@ -6,6 +6,9 @@
 body {
   font-family: 'Padauk', sans-serif; }
 
+h2 {
+  font-family: 'Padauk', sans-serif; }
+
 header {
   background-color: #0093E9;
   background-image: linear-gradient(0deg, #0093E9 0%, #80D0C7 50%, #ffffff 100%);
@@ -21,7 +24,7 @@ header {
     font-size: 175%;
     justify-content: left;
     background-color: transparent;
-    color: white;
+    color: #E8F1F2;
     padding: 5px;
     margin: 10px;
     width: 40%;
@@ -73,7 +76,7 @@ header {
     grid-area: link1;
     align-self: flex-end;
     border-radius: 5px;
-    color: color1; }
+    color: #13293D; }
   .intro .link2 {
     padding: 10px;
     margin: 30px;
@@ -114,7 +117,10 @@ header {
     grid-area: escanea;
     font-size: 200%;
     margin: 25px;
-    padding: 10px; }
+    padding: 10px;
+    color: #006494;
+    background-color: #13293D;
+    border-radius: 15px; }
   .intro1 .imagen1 {
     grid-area: imagen1;
     width: 150px;
@@ -147,7 +153,12 @@ header {
     text-decoration: none;
     text-align: center;
     font-size: 150%;
-    align-self: flex-start; }
+    align-self: flex-start;
+    padding: 10px;
+    margin: 30px;
+    background-image: linear-gradient(to bottom, #0099ff, white);
+    width: auto;
+    border-radius: 5px; }
   .intro2 .imagen2 {
     grid-area: imagen2;
     height: 300px;
@@ -243,6 +254,94 @@ footer {
     padding: 10px;
     font-size: 1.25rem;
     width: 50%; }
+
+.intro3 {
+  margin: 30px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center; }
+  .intro3 h2 {
+    text-align: center;
+    margin: 30px;
+    padding: 15px;
+    color: #006494;
+    background-color: #13293D;
+    border-radius: 15px;
+    width: 50%; }
+  .intro3 .cajas .caja1 {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px;
+    width: 25%;
+    border-radius: 15px;
+    background-color: #006494; }
+    .intro3 .cajas .caja1 h3 {
+      text-align: left; }
+    .intro3 .cajas .caja1 p {
+      text-align: left; }
+  .intro3 .cajas .caja2 {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px;
+    width: 25%;
+    border-radius: 15px;
+    background-color: #247BA0; }
+    .intro3 .cajas .caja2 h3 {
+      text-align: left; }
+    .intro3 .cajas .caja2 p {
+      text-align: left; }
+  .intro3 .cajas .caja3 {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px;
+    width: 25%;
+    border-radius: 15px;
+    background-color: #1B98E0; }
+    .intro3 .cajas .caja3 h3 {
+      text-align: left; }
+    .intro3 .cajas .caja3 p {
+      text-align: left; }
+  .intro3 .cajas .caja4 {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px;
+    width: 25%;
+    border-radius: 15px;
+    background-color: #006494; }
+    .intro3 .cajas .caja4 h3 {
+      text-align: left; }
+    .intro3 .cajas .caja4 p {
+      text-align: left; }
+  .intro3 .cajas .caja5 {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px;
+    width: 25%;
+    border-radius: 15px;
+    background-color: #247BA0; }
+    .intro3 .cajas .caja5 h3 {
+      text-align: left; }
+    .intro3 .cajas .caja5 p {
+      text-align: left; }
+  .intro3 .cajas .caja6 {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px;
+    width: 25%;
+    border-radius: 15px;
+    background-color: #1B98E0; }
+    .intro3 .cajas .caja6 h3 {
+      text-align: left; }
+    .intro3 .cajas .caja6 p {
+      text-align: left; }
+
+.intro4 .redes, .intro4 .redes .iconFb, .intro4 .redes .iconIg, .intro4 .redes .iconTw {
+  width: 30%;
+  margin: 30px;
+  display: flex;
+  background-color: #13293D; }
 
 /* ESTILO MEDIAQUERIE */
 @media screen and (max-width: 480px) {

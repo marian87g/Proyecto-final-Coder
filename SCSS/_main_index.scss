@@ -23,7 +23,7 @@
         grid-area: link1;
         align-self: flex-end;
         border-radius: 5px;
-        color: color1;
+        color: $color1;
     }
 
     .link2 {
@@ -77,6 +77,9 @@
         font-size: 200%;
         margin: 25px;
         padding: 10px;
+        color: $color2;
+        background-color: $color1;
+        border-radius: 15px;
     }
 
     .imagen1{
@@ -122,6 +125,11 @@
         text-align: center;
         font-size: 150%;
         align-self: flex-start;
+        padding: 10px;
+        margin: 30px;
+        background-image: linear-gradient(to bottom, rgb(0, 153, 255), white);
+        width: auto;
+        border-radius: 5px;
     }
     .imagen2{
         grid-area: imagen2;
