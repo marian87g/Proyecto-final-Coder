@@ -568,13 +568,14 @@ footer {
     grid-template-areas: "texto1";
     height: auto;
     text-align: center;
-    margin: 25px; }
+    margin: 25px;
+    width: auto; }
     .intro1 .escanea {
       display: none; }
     .intro1 .imagen1 {
       display: none; }
     .intro1 .texto1 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       width: 80%; }
   .intro2 {
     grid-template-columns: 1fr;
