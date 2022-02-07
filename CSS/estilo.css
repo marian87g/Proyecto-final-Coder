@@ -65,7 +65,7 @@ header {
   grid-template-areas: "link1 texto imagen" "link2 texto imagen";
   align-items: center;
   justify-items: center;
-  background-image: url(/images/seccionBg.jpg);
+  background-image: url(images/seccionBg.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
   .intro .link1 {
@@ -438,7 +438,7 @@ footer {
   flex-direction: column;
   justify-content: space-evenly;
   align-content: center;
-  background-image: url(/images/seccion3Bg.jpg);
+  background-image: url(images/seccion3Bg.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
   .intro3 h2 {
