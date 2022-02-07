@@ -10,6 +10,7 @@ $color5: #E8F1F2;
 @import "ingreso_form";
 @import "registro_form";
 @import "beneficios";
+@import "contacto_form";
 
 @mixin estilo_cajas ($bg){
     display: inline-block;
@@ -18,6 +19,7 @@ $color5: #E8F1F2;
     width: 25%;
     border-radius: 15px;
     background-color: $bg;
+    color: $color5;
     
     h3{
         text-align: left;
@@ -27,22 +29,33 @@ $color5: #E8F1F2;
     }
 }
 
+@font-face {
+    font-family: 'Alien encounters bold';
+    src: url(./images/Alien-Encounters-Bold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
 .intro3{
-    margin: 30px;
-    height: 400px;
+    margin: 10px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-content: center;
+    background-image: url(/images/seccion3Bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     h2{
         text-align: center;
         margin: 30px;
         padding: 15px;
-        color: $color2;
+        color: $color5;
         background-color: $color1;
         border-radius: 15px;
         width: 50%;
+        letter-spacing: 2px;
     }
     .cajas{
         
@@ -64,61 +77,70 @@ $color5: #E8F1F2;
         .caja6{
             @include estilo_cajas($color4);
         }
+        h3{
+            color: $color1;
+        }
     }  
 
 }
 
-.intro4{
-    .redes{
-        width: 30%;
-        margin: 30px;
-        display: flex;
-        background-color: $color1;
-        .iconFb{
-            @extend .redes;
-        }
-        .iconIg{
-            @extend .redes;
-        }
-        .iconTw{
-            @extend .redes;
-        }
+// .intro4{
+//     .redes{
+//         width: 30%;
+//         margin: 30px;
+//         display: flex;
+//         background-color: $color1;
+//         .iconFb{
+//             @extend .redes;
+//         }
+//         .iconIg{
+//             @extend .redes;
+//         }
+//         .iconTw{
+//             @extend .redes;
+//         }
     
-    }
+//     }
     
-}
+// }
+
 
 /* ESTILO MEDIAQUERIE */
 
 @media screen and (max-width: 480px) {
 
     header{
-        width: 100%;
+        width: auto;
+        height: auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
 
         .log{
+            width: 70%;
             display: flex;
-            flex-direction: column;
             font-size: 200%;
-            justify-content: center;
+            justify-content: space-evenly;
 
+            img{
+                width: 20%;
+            }
         }
         
         nav{
             .bar{
                 display: flex;
-                flex-direction: column;
-                font-size: 75%;
+                flex-direction: row;
+                font-size: 0.8rem;
             }
         }
         
     }
 
     .intro{
-        grid-template-columns: 1fr, 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 0.5fr 1fr;
         grid-template-areas: 
             "texto texto"
             "link1 link2"
@@ -126,29 +148,147 @@ $color5: #E8F1F2;
         justify-items: center;
         align-items: center;
         height: auto;
+        width: auto;
+        background-size: auto;
+
+        .link1{
+            align-self: center;
+        }
+        .link2{
+            align-self: center;
+        }
 
         .texto{
-            font-size: 150%;
+            width: 75%;
+            font-size: 1.5rem;
+            height: auto;
         }
     }
     
     .intro1{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: 1fr;
         grid-template-areas: 
-            "escanea"
-            "imagen1"
             "texto1";
         height: auto;
+        text-align: center;
+        margin: 25px;
+
+        .escanea{
+            display: none;
+        }
+        .imagen1{
+            display: none;
+        }
+        .texto1{
+            font-size: 1.5rem;
+            width: 80%;
+        }
     }
     .intro2{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, fr);
+        grid-template-rows: 1fr 1fr 0.5fr;
         grid-template-areas: 
             "imagen2"
-            "linkregistro"
-            "texto2";
+            "texto2"
+            "linkregistro";
         height: auto;
+        margin: 5px;
+
+        .imagen2{
+            height: 75%;
+            width: 80%;
+        }
+        .texto2{
+            width: 80%;
+        }
+        .linkregistro{
+            width: 80%;
+        }
+    }
+
+    .intro3{
+        width: 95%;
+        height: auto;
+
+        h2{
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .cajas{
+            width: auto;
+            margin: 5px;
+        }
+
+    }
+
+    footer{
+        height: auto;
+        width: auto;
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px;
+        }
+    }
+
+    .seccionBenef{
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 0.2fr 0.5fr 1fr 0.5fr;
+        grid-template-areas: 
+            "titulo"
+            "imgBenef1"
+            "textoBenef"
+            "imgBenef2";
+        margin: 5px;
+        width: auto;
+        height: auto;
+        justify-content: center;
+        align-content: center;
+    
+
+        .titulo{
+            font-size: 2rem;
+            text-align: center;
+            height: auto;
+        }
+        .imgBenef1{
+            height: 250px;
+        }
+        .imgBenef2{
+            height: 250px;
+        }
+        .textoBenef{
+            width: 80%;
+            height: auto;
+            font-size: 1.5rem;
+            letter-spacing: normal;
+            margin: 15px;
+            padding: 5px;
+            line-height: 30px;
+        }
+
+    }
+
+    .contactoForm{
+        height: auto;
+        width: 95%;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+
+        h2{
+            font-size: 2rem;
+            margin: 15px;
+            padding: 5px;
+            letter-spacing: 1px;
+            width: auto;
+        }
     }
 
 

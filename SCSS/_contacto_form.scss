@@ -1,45 +1,27 @@
-.ingresoForm{
-    display: flex;
-    flex-direction: column;
+.contactoForm{
     align-items: center;
-    height: 480px;
+    justify-items: center;
+    margin: 10px;
+    height: 550px;
     background-image: url(/images/897.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    justify-content: center;
-    margin: 10px;
 
     h2{
-        font-size: 250%;
-        text-align: center;
-        margin: 25px;
-        padding: 10px;
+        font-size: 2.5rem;
+        margin: 30px;
+        padding: 15px;
         color: $color5;
         background-color: $color1;
         border-radius: 15px;
         letter-spacing: 2px;
-        width: auto;
-    }
-    form{
-        margin: 30px;
+        width: 50%;
         text-align: center;
-        
-        div{
-            margin: 15px;
-            
-            label{
-                font-size: 110%;
-                color: $color1;
-                font-weight: bold;
+        align-self: center;
 
-            }
-            input{
-                border-radius: 5px;
-                border-style: 2px solid;
-            }
-        }
     }
+
     .divVolver{
         align-self: center;
         margin: 15px;

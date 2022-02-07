@@ -10,14 +10,15 @@ h2 {
   font-family: 'Padauk', sans-serif; }
 
 header {
-  background-color: #0093E9;
-  background-image: linear-gradient(0deg, #0093E9 0%, #80D0C7 50%, #ffffff 100%);
+  background-color: #006494;
+  background-image: linear-gradient(0deg, #247BA0, #1B98E0, #E8F1F2);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   width: auto;
-  height: 90px; }
+  height: 90px;
+  align-content: center; }
   header .log {
     display: flex;
     font-family: 'Inter', sans-serif;
@@ -50,25 +51,29 @@ header {
   header nav a {
     display: flex;
     text-decoration: none;
-    color: white; }
+    color: #E8F1F2; }
     header nav a:hover {
       font-style: italic;
       font-weight: bold; }
 
 .intro {
   margin: 10px;
-  background-color: white;
   height: 400px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "link1 texto imagen" "link2 texto imagen";
   align-items: center;
-  justify-items: center; }
+  justify-items: center;
+  background-image: url(/images/seccionBg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
   .intro .link1 {
     padding: 10px;
     margin: 30px;
-    background-image: linear-gradient(to bottom, #0099ff, white);
+    background-color: #006494;
+    background-image: linear-gradient(0deg, #E8F1F2 0%, #1B98E0 75%, #247BA0 100%);
+    color: #E8F1F2;
     width: auto;
     text-align: center;
     text-decoration: none;
@@ -76,28 +81,41 @@ header {
     grid-area: link1;
     align-self: flex-end;
     border-radius: 5px;
-    color: #13293D; }
+    transition: all 1s ease; }
+    .intro .link1:hover {
+      transform: scale(1.2);
+      font-style: italic;
+      background-color: #13293D; }
   .intro .link2 {
     padding: 10px;
     margin: 30px;
-    background-image: linear-gradient(to top, #0099ff, white);
+    background-color: #006494;
+    background-image: linear-gradient(0deg, #247BA0 0%, #1B98E0 50%, #E8F1F2 100%);
+    color: #E8F1F2;
     width: auto;
     text-align: center;
     text-decoration: none;
     font-size: 125%;
     grid-area: link2;
     align-self: flex-start;
-    border-radius: 5px; }
+    border-radius: 5px;
+    transition: all 1s ease; }
+    .intro .link2:hover {
+      transform: scale(1.2);
+      font-style: italic; }
   .intro .texto {
-    color: #08F;
-    font-size: 220%;
+    color: #13293D;
+    font-size: 1.7rem;
     width: 90%;
     text-align: center;
-    padding: 10px;
-    margin: 20px;
+    padding: 5px;
+    margin: 15px;
     grid-area: texto;
-    font-family: 'Inter', sans-serif;
-    transition: all 3s ease-out; }
+    letter-spacing: 2px;
+    line-height: 70px; }
+    .intro .texto:hover {
+      transform: scale(0.2);
+      text-transform: uppercase; }
   .intro .imagen {
     border-radius: 50px;
     align-self: center;
@@ -106,35 +124,44 @@ header {
     margin: 10px; }
 
 .intro1 {
+  margin: 10px;
   height: 450px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "escanea texto1" "imagen1 texto1";
   align-items: center;
-  justify-items: center; }
+  justify-items: center;
+  background-image: url(/images/seccion1Bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
   .intro1 .escanea {
     grid-area: escanea;
     font-size: 200%;
     margin: 25px;
     padding: 10px;
-    color: #006494;
+    color: #E8F1F2;
     background-color: #13293D;
-    border-radius: 15px; }
+    border-radius: 15px;
+    letter-spacing: 2px;
+    width: 75%;
+    text-align: center; }
   .intro1 .imagen1 {
     grid-area: imagen1;
-    width: 150px;
+    width: 200px;
     margin: 75px; }
   .intro1 .texto1 {
     grid-area: texto1;
     font-size: 150%;
     width: 70%;
-    text-align: center; }
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #13293D; }
 
 .intro2 {
   margin: 10px;
-  background-color: white;
-  height: 400px;
+  height: 500px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1.5fr 0.5fr;
@@ -147,7 +174,10 @@ header {
     margin: 30px;
     padding: 15px;
     font-size: 125%;
-    width: 60%; }
+    width: 60%;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #13293D; }
   .intro2 .linkregistro {
     grid-area: linkregistro;
     text-decoration: none;
@@ -156,80 +186,147 @@ header {
     align-self: flex-start;
     padding: 10px;
     margin: 30px;
-    background-image: linear-gradient(to bottom, #0099ff, white);
+    background-color: #006494;
+    background-image: linear-gradient(0deg, #E8F1F2 0%, #1B98E0 75%, #247BA0 100%);
+    color: #E8F1F2;
     width: auto;
     border-radius: 5px; }
+    .intro2 .linkregistro:hover {
+      transform: scale(1.2);
+      font-style: italic; }
   .intro2 .imagen2 {
     grid-area: imagen2;
     height: 300px;
     border-radius: 50px; }
 
 footer {
-  background-color: #0093E9;
-  background-image: linear-gradient(0deg, #0093E9 0%, #80D0C7 50%, #ffffff 100%); }
+  background-color: #006494;
+  background-image: linear-gradient(0deg, #E8F1F2, #1B98E0, #247BA0);
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
   footer ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 15px;
-    width: 100%;
-    list-style: none; }
+    padding: 5px;
+    width: 60%;
+    list-style: none;
+    margin: 10px;
+    height: auto; }
+    footer ul li {
+      width: auto;
+      margin: 5px;
+      font-size: 1rem;
+      color: #E8F1F2; }
     footer ul li a {
-      width: 50%;
-      padding: 5px;
-      margin: 10px;
-      font-size: 125%;
-      text-decoration: none; }
+      width: auto;
+      margin: 5px;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #E8F1F2; }
 
 .ingresoForm {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 450px; }
+  height: 480px;
+  background-image: url(/images/897.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  margin: 10px; }
   .ingresoForm h2 {
     font-size: 250%;
     text-align: center;
-    margin: 30px;
-    padding: 15px; }
+    margin: 25px;
+    padding: 10px;
+    color: #E8F1F2;
+    background-color: #13293D;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    width: auto; }
   .ingresoForm form {
-    text-align: center;
-    margin: 30px; }
+    margin: 30px;
+    text-align: center; }
     .ingresoForm form div {
       margin: 15px; }
       .ingresoForm form div label {
-        font-size: 110%; }
+        font-size: 110%;
+        color: #13293D;
+        font-weight: bold; }
       .ingresoForm form div input {
-        border-radius: 5px; }
-  .ingresoForm a {
-    text-decoration: none;
-    margin: 30px;
-    pad: 5px;
-    font-size: 150%; }
+        border-radius: 5px;
+        border-style: 2px solid; }
+  .ingresoForm .divVolver {
+    align-self: center;
+    margin: 15px;
+    padding: 5px;
+    background-color: #006494;
+    background-image: linear-gradient(0deg, #E8F1F2 0%, #1B98E0 75%, #247BA0 100%);
+    border-radius: 5px;
+    width: 150px;
+    text-align: center; }
+    .ingresoForm .divVolver a {
+      text-align: center;
+      text-decoration: none;
+      font-size: 150%;
+      color: #E8F1F2; }
+      .ingresoForm .divVolver a:hover {
+        font-style: italic;
+        font-weight: bold; }
 
 .registroForm {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: auto; }
+  height: auto;
+  background-image: url(/images/897.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 10px; }
   .registroForm h2 {
     font-size: 250%;
     text-align: center;
     margin: 30px;
-    padding: 15px; }
+    padding: 15px;
+    color: #E8F1F2;
+    background-color: #13293D;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    width: auto; }
   .registroForm form {
     text-align: center;
     margin: 30px; }
     .registroForm form div {
       margin: 15px; }
       .registroForm form div label {
-        font-size: 110%; }
+        font-size: 110%;
+        color: #13293D;
+        font-weight: bold; }
       .registroForm form div input {
         border-radius: 5px; }
-  .registroForm a {
-    text-decoration: none;
-    margin: 30px;
-    pad: 5px;
-    font-size: 150%; }
+  .registroForm .divVolver {
+    align-self: center;
+    margin: 15px;
+    padding: 5px;
+    background-color: #006494;
+    background-image: linear-gradient(0deg, #E8F1F2 0%, #1B98E0 75%, #247BA0 100%);
+    border-radius: 5px;
+    width: 150px;
+    text-align: center; }
+    .registroForm .divVolver a {
+      text-align: center;
+      text-decoration: none;
+      font-size: 150%;
+      color: #E8F1F2; }
+      .registroForm .divVolver a:hover {
+        font-style: italic;
+        font-weight: bold; }
 
 .seccionBenef {
   margin: 10px;
@@ -237,46 +334,130 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.5fr 1fr 1fr;
   grid-template-areas: "titulo titulo" "imgBenef1 textoBenef" "imgBenef2 textoBenef";
+  background-image: url(/images/897.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   justify-items: center;
   align-items: center; }
   .seccionBenef .titulo {
     grid-area: titulo;
-    margin: 5px;
-    font-size: 3rem; }
+    font-size: 3rem;
+    margin: 30px;
+    padding: 15px;
+    color: #E8F1F2;
+    background-color: #13293D;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    width: auto; }
   .seccionBenef .imgBenef1 {
-    grid-area: imgBenef1; }
+    grid-area: imgBenef1;
+    border-radius: 15px;
+    height: 200px; }
   .seccionBenef .imgBenef2 {
-    grid-area: imgBenef2; }
+    grid-area: imgBenef2;
+    border-radius: 15px;
+    height: 200px; }
   .seccionBenef .textoBenef {
     grid-area: textoBenef;
     text-align: center;
     margin: 30px;
     padding: 10px;
     font-size: 1.25rem;
-    width: 50%; }
+    width: 50%;
+    color: #13293D;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 35px; }
+  .seccionBenef .divVolver {
+    align-self: center;
+    margin: 15px;
+    padding: 5px;
+    background-color: #006494;
+    background-image: linear-gradient(0deg, #E8F1F2 0%, #1B98E0 75%, #247BA0 100%);
+    border-radius: 5px;
+    width: 150px;
+    text-align: center; }
+    .seccionBenef .divVolver a {
+      text-align: center;
+      text-decoration: none;
+      font-size: 150%;
+      color: #E8F1F2; }
+      .seccionBenef .divVolver a:hover {
+        font-style: italic;
+        font-weight: bold; }
+
+.contactoForm {
+  align-items: center;
+  justify-items: center;
+  margin: 10px;
+  height: 550px;
+  background-image: url(/images/897.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .contactoForm h2 {
+    font-size: 2.5rem;
+    margin: 30px;
+    padding: 15px;
+    color: #E8F1F2;
+    background-color: #13293D;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    width: 50%;
+    text-align: center;
+    align-self: center; }
+  .contactoForm .divVolver {
+    align-self: center;
+    margin: 15px;
+    padding: 5px;
+    background-color: #006494;
+    background-image: linear-gradient(0deg, #E8F1F2 0%, #1B98E0 75%, #247BA0 100%);
+    border-radius: 5px;
+    width: 150px;
+    text-align: center; }
+    .contactoForm .divVolver a {
+      text-align: center;
+      text-decoration: none;
+      font-size: 150%;
+      color: #E8F1F2; }
+      .contactoForm .divVolver a:hover {
+        font-style: italic;
+        font-weight: bold; }
+
+@font-face {
+  font-family: 'Alien encounters bold';
+  src: url(./images/Alien-Encounters-Bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal; }
 
 .intro3 {
-  margin: 30px;
-  height: 400px;
+  margin: 10px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-content: center; }
+  align-content: center;
+  background-image: url(/images/seccion3Bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
   .intro3 h2 {
     text-align: center;
     margin: 30px;
     padding: 15px;
-    color: #006494;
+    color: #E8F1F2;
     background-color: #13293D;
     border-radius: 15px;
-    width: 50%; }
+    width: 50%;
+    letter-spacing: 2px; }
   .intro3 .cajas .caja1 {
     display: inline-block;
     margin: 15px;
     padding: 10px;
     width: 25%;
     border-radius: 15px;
-    background-color: #006494; }
+    background-color: #006494;
+    color: #E8F1F2; }
     .intro3 .cajas .caja1 h3 {
       text-align: left; }
     .intro3 .cajas .caja1 p {
@@ -287,7 +468,8 @@ footer {
     padding: 10px;
     width: 25%;
     border-radius: 15px;
-    background-color: #247BA0; }
+    background-color: #247BA0;
+    color: #E8F1F2; }
     .intro3 .cajas .caja2 h3 {
       text-align: left; }
     .intro3 .cajas .caja2 p {
@@ -298,7 +480,8 @@ footer {
     padding: 10px;
     width: 25%;
     border-radius: 15px;
-    background-color: #1B98E0; }
+    background-color: #1B98E0;
+    color: #E8F1F2; }
     .intro3 .cajas .caja3 h3 {
       text-align: left; }
     .intro3 .cajas .caja3 p {
@@ -309,7 +492,8 @@ footer {
     padding: 10px;
     width: 25%;
     border-radius: 15px;
-    background-color: #006494; }
+    background-color: #006494;
+    color: #E8F1F2; }
     .intro3 .cajas .caja4 h3 {
       text-align: left; }
     .intro3 .cajas .caja4 p {
@@ -320,7 +504,8 @@ footer {
     padding: 10px;
     width: 25%;
     border-radius: 15px;
-    background-color: #247BA0; }
+    background-color: #247BA0;
+    color: #E8F1F2; }
     .intro3 .cajas .caja5 h3 {
       text-align: left; }
     .intro3 .cajas .caja5 p {
@@ -331,50 +516,132 @@ footer {
     padding: 10px;
     width: 25%;
     border-radius: 15px;
-    background-color: #1B98E0; }
+    background-color: #1B98E0;
+    color: #E8F1F2; }
     .intro3 .cajas .caja6 h3 {
       text-align: left; }
     .intro3 .cajas .caja6 p {
       text-align: left; }
-
-.intro4 .redes, .intro4 .redes .iconFb, .intro4 .redes .iconIg, .intro4 .redes .iconTw {
-  width: 30%;
-  margin: 30px;
-  display: flex;
-  background-color: #13293D; }
+  .intro3 .cajas h3 {
+    color: #13293D; }
 
 /* ESTILO MEDIAQUERIE */
 @media screen and (max-width: 480px) {
   header {
-    width: 100%;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    align-items: center; }
     header .log {
+      width: 70%;
       display: flex;
-      flex-direction: column;
       font-size: 200%;
-      justify-content: center; }
+      justify-content: space-evenly; }
+      header .log img {
+        width: 20%; }
     header nav .bar {
       display: flex;
-      flex-direction: column;
-      font-size: 75%; }
+      flex-direction: row;
+      font-size: 0.8rem; }
   .intro {
-    grid-template-columns: 1fr, 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr;
     grid-template-areas: "texto texto" "link1 link2" "imagen imagen";
     justify-items: center;
     align-items: center;
-    height: auto; }
+    height: auto;
+    width: auto;
+    background-size: auto; }
+    .intro .link1 {
+      align-self: center; }
+    .intro .link2 {
+      align-self: center; }
     .intro .texto {
-      font-size: 150%; }
+      width: 75%;
+      font-size: 1.5rem;
+      height: auto; }
   .intro1 {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "escanea" "imagen1" "texto1";
-    height: auto; }
+    grid-template-rows: 1fr;
+    grid-template-areas: "texto1";
+    height: auto;
+    text-align: center;
+    margin: 25px; }
+    .intro1 .escanea {
+      display: none; }
+    .intro1 .imagen1 {
+      display: none; }
+    .intro1 .texto1 {
+      font-size: 1.5rem;
+      width: 80%; }
   .intro2 {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, fr);
-    grid-template-areas: "imagen2" "linkregistro" "texto2";
-    height: auto; } }
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-areas: "imagen2" "texto2" "linkregistro";
+    height: auto;
+    margin: 5px; }
+    .intro2 .imagen2 {
+      height: 75%;
+      width: 80%; }
+    .intro2 .texto2 {
+      width: 80%; }
+    .intro2 .linkregistro {
+      width: 80%; }
+  .intro3 {
+    width: 95%;
+    height: auto; }
+    .intro3 h2 {
+      margin: 10px;
+      padding: 5px; }
+    .intro3 .cajas {
+      width: auto;
+      margin: 5px; }
+  footer {
+    height: auto;
+    width: auto; }
+    footer ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5px; }
+  .seccionBenef {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.5fr 1fr 0.5fr;
+    grid-template-areas: "titulo" "imgBenef1" "textoBenef" "imgBenef2";
+    margin: 5px;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-content: center; }
+    .seccionBenef .titulo {
+      font-size: 2rem;
+      text-align: center;
+      height: auto; }
+    .seccionBenef .imgBenef1 {
+      height: 250px; }
+    .seccionBenef .imgBenef2 {
+      height: 250px; }
+    .seccionBenef .textoBenef {
+      width: 80%;
+      height: auto;
+      font-size: 1.5rem;
+      letter-spacing: normal;
+      margin: 15px;
+      padding: 5px;
+      line-height: 30px; }
+  .contactoForm {
+    height: auto;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center; }
+    .contactoForm h2 {
+      font-size: 2rem;
+      margin: 15px;
+      padding: 5px;
+      letter-spacing: 1px;
+      width: auto; } }
